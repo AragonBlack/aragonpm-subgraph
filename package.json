@@ -1,0 +1,18 @@
+{
+  "name": "@ablack/aragonpm-subgraph",
+  "version": "0.0.1",
+  "repository": "https://github.com/AragonBlack/aragonpm-subgraph",
+  "license": "MIT",
+  "scripts": {
+    "codegen": "graph codegen --output-dir types/",
+    "build": "graph build --debug",
+    "create:local": "graph create aragonblack/aragonpm --debug --node http://127.0.0.1:8020",
+    "deploy:local": "graph deploy aragonblack/aragonpm --debug --node http://127.0.0.1:8020 --ipfs http://localhost:5001",
+    "deploy:hosted": "graph deploy aragonblack/aragonpm --debug --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/",
+    "watch": "graph deploy aragonblack/aragonpm --debug --watch --node http://127.0.0.1:8020/ --ipfs http://localhost:5001"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.10.0",
+    "@graphprotocol/graph-ts": "^0.10.0"
+  }
+}

@@ -1,0 +1,15 @@
+type Repository @entity {
+  id: ID!
+  appId: Bytes!
+  name: String!
+  address: Bytes!
+  versions: [Version!] @derivedFrom(field: "repository")
+}
+
+type Version @entity {
+  id: ID!
+  repository: Repository!
+  version: String!
+  contract: Bytes
+  content: String
+}
